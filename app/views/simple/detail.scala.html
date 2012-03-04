@@ -1,0 +1,18 @@
+@(gist: Option[Gist])(implicit request: play.api.mvc.Request[AnyContent])
+
+@main("Simple DEMO " + gist.map(_.title).getOrElse("Not Found")) {
+
+  @gist.map { g =>
+    <h2>@g.title</h2>
+
+    @g.files.map { f =>
+      <h3>@f.name</h3>
+      <pre><code>@f.content</code></pre>
+    }
+  }
+
+  @if(gist.isEmpty) {
+    そのIDの gist は見つかりません。
+  }
+
+}
