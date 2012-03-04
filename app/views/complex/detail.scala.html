@@ -1,6 +1,6 @@
-@(gist: Option[Gist])(implicit request: play.api.mvc.Request[AnyContent])
+@(gist: Option[Gist])(implicit template: String => Html => Html)
 
-@main("Simple DEMO " + gist.map(_.title).getOrElse("Not Found")) {
+@template("Complex DEMO " + gist.map(_.title).getOrElse("Not Found")) {
 
   @gist.map { g =>
     <h2>@g.title</h2>

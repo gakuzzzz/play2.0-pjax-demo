@@ -1,7 +1,10 @@
-@(message: String)(implicit request: play.api.mvc.Request[AnyContent])
+@main("Play2.0 + pjax DEMO") {
 
-@main("Welcome to Play 2.0") {
+  <h1>DEMO List</h1>
 
-    @play20.welcome(message)
+  <ul>
+      <li><a href="@routes.Simple.index">Simple DEMO</a></li>
+      <li><a href="@routes.Complex.index">Complex DEMO</a></li>
+  </ul>
 
 }

@@ -2,3 +2,23 @@ This is your new Play 2.0 application
 =====================================
 
 This file will be packaged with your application, when using `play dist`.
+
+Play 2.0 + pjax DEMO
+--------------------
+
+このアプリケーションは Play 2.0 で pjax を扱うデモアプリです。
+
+以下の二つのデモがあります。
+
+### Simple DEMO
+
+最も単純な pjax です。 静的な部分の描画に全く Domain Logic を必要としないケースです。
+
+全体描画の際に Domain Logic を呼び出す必要が無いので、Template にて切り替えを行います。
+
+### Complex DEMO
+
+こちらはより一般的な、静的な部分の描画にも Domain Logic を呼び出す必要があるケースのサンプルです。
+
+Controller にて切り替えを行います。最終的に描画を行う Template 自体を個別の Template への引数として渡しています。
+

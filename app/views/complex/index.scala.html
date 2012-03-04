@@ -1,0 +1,24 @@
+@(gists: Iterable[Gist])(implicit template: String => Html => Html)
+
+@template("Complex DEMO 一覧ページ") {
+
+<table>
+    <thead>
+    <tr>
+        <th>タイトル</th>
+        <th>作成日</th>
+    </tr>
+    </thead>
+    <tbody>
+
+  @gists.map { gist =>
+    <tr>
+      <th><a data-pjax="#content" href="@routes.Complex.detail(gist.id)">@gist.title</a></th>
+      <td>@gist.makeDate</td>
+    </tr>
+  }
+
+    </tbody>
+</table>
+
+}
