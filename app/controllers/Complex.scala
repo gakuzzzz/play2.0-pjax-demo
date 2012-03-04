@@ -4,15 +4,16 @@ import play.api.mvc._
 import play.api.templates.Html
 import models._
 
-object Complex extends Controller {
+trait Pjax {
+  self: Controller =>
 
-  private def fullTemplate(user: User)(title: String)(content: Html): Html =
+  protected def fullTemplate(user: User)(title: String)(content: Html): Html =
     views.html.complex.fullTemplate(user)(title)(content)
 
-  private def pjaxTemplate(title: String)(content: Html): Html =
+  protected def pjaxTemplate(title: String)(content: Html): Html =
     views.html.complex.pjaxTemplate(title)(content)
 
-  private def pjaxAction(f: (String => Html => Html) => Result): Action[AnyContent] =
+  protected def pjaxAction(f: (String => Html => Html) => Result): Action[AnyContent] =
     Action { request =>
       if (request.headers.keys("X-PJAX")) {
         f(pjaxTemplate)
@@ -21,6 +22,10 @@ object Complex extends Controller {
         f(fullTemplate(user))
       }
     }
+
+}
+
+object Complex extends Controller with Pjax {
 
   def index = pjaxAction { implicit template =>
     Ok(views.html.complex.index(Gist.findAll))
