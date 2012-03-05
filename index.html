@@ -105,8 +105,8 @@
 <h2>#! specs</h2>
 <ul style="font-size: 80%;">
 	<li>Googleが <a href="https://developers.google.com/webmasters/ajax-crawling/">Making AJAX Applications Crawlable</a> を公開</li>
-	<li>GoogleBot は <strong style="color: #ff4444">#!</strong> を <strong style="color: #44aa44">_escaped_fragment_</strong> に読み替える</li>
-	<li><strong style="color: #44aa44">_escaped_fragment_</strong> 付きのアクセスに<br/>完全なHTMLを返せば<strong style="color: #4444ff">検索インデックスに登録</strong>する</li>
+	<li>GoogleBot は <strong style="color: #ff4444">#!</strong> を ?<strong style="color: #44aa44">_escaped_fragment_</strong>= に読替える</li>
+	<li><strong style="color: #44aa44">_escaped_fragment_</strong> パラメータのあるアクセスに<br/>完全なHTMLを返せば<strong style="color: #4444ff">検索インデックスに登録</strong>する</li>
 </ul>
 </div>
 
@@ -114,7 +114,7 @@
 <h2>#! specs</h2>
 <ul>
 	<li><strong style="color: #ff4444">#! specs</strong> に従えば<strong style="color: #44aa44">検索エンジン</strong>に対応できる</li>
-	<li><strong style="color: #4444ff">Twitter</strong> などが現在も採用している。</li>
+	<li><strong style="color: #4444ff">Twitter</strong> などが現在も採用している</li>
 	<li>https://twitter.com/<strong style="color: #ff4444">#!</strong>/gakuzzzz</li>
 </ul>
 </div>
@@ -171,12 +171,12 @@
 <h2>pjaxの仕組み</h2>
 <h3>クライアント</h3>
 <ul>
-	<li>Ajax時ヘッダに <strong style="color: #ff4444">X-PJAX</strong> を付与し現在のURLを書き換え、履歴に追加する。</li>
-	<li>返ってきた<strong style="color: #44aa44">HTML断片</strong>でページの一部を置き換える。</li>
+	<li>Ajax時ヘッダに <strong style="color: #ff4444">X-PJAX</strong> を付与し現在のURLを書き換え、履歴に追加する</li>
+	<li>返ってきた<strong style="color: #44aa44">HTML断片</strong>でページの一部を置き換える</li>
 </ul>
 <h3>サーバ</h3>
 <ul>
-	<li>ヘッダに <strong style="color: #ff4444">X-PJAX</strong> があれば<strong style="color: #44aa44">HTML断片</strong>を返し、無ければページ全体の<strong style="color: #4444ff">完全なHTML</strong>を返す。</li>
+	<li>ヘッダに <strong style="color: #ff4444">X-PJAX</strong> があれば<strong style="color: #44aa44">HTML断片</strong>を返し、無ければページ全体の<strong style="color: #4444ff">完全なHTML</strong>を返す</li>
 </ul>
 </div>
 
