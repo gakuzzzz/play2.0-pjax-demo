@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+
+<link rel="stylesheet" href="./CSSslide.css" type="text/css" />
+<script type="text/javascript" src="./CSSslide.js"></script>
+
+<title>Play2.0 + pjax</title>
+</head>
+<body>
+
+<div>
+	<p style="text-align: right; font-size: 70%">2012-03-06<br/>PlayBay</p>
+<h1 style="text-align:center">Play2.0 + pjax</h1>
+<p style="text-align: right;">がくぞ(@gakuzzzz)</p>
+</div>
+
+<div>
+<h2>アジェンダ</h2>
+<ol>
+	<li>自己紹介</li>
+	<li>pjaxとは</li>
+	<li>Play2.0 + pjax DEMO</li>
+	<li>質疑応答</li>
+</ol>
+</div>
+
+<div>
+<h2>自己紹介</h2>
+<ul>
+	<li>なかむら まなぶ / 中村 学</li>
+	<li>がくぞ / @gakuzzzz</li>
+	<li>株式会社Tech to Value</li>
+	<li><a href="https://twitter.com/#!/gakuzzzz">https://twitter.com/#!/gakuzzzz</a></li>
+	<li><a href="http://d.hatena.ne.jp/gakuzo/">http://d.hatena.ne.jp/gakuzo/</a></li>
+</ul>
+</div>
+
+<div>
+	<p style="text-align: center; font-size: 350%"><strong style="color: #ff4444">pjax</strong>とは？</p>
+</div>
+
+<div>
+	<p style="text-align: center; font-size: 200%">の前にちょっと<strong style="color: #4444ff">歴史</strong>のお勉強</p>
+</div>
+
+<div>
+<h2>Ajax</h2>
+<ul>
+	<li><strong style="color: #ff4444">A</strong>synchronous <strong style="color: #ff4444">Ja</strong>vaScript + <strong style="color: #ff4444">X</strong>ML</li>
+	<li>2005年2月18日 命名</li>
+</ul>
+</div>
+
+<div>
+<h2>Ajaxのメリット</h2>
+<ul>
+	<li>部分的な情報だけですむので<strong style="color: #4444ff">データ転送量</strong>が小さい</li>
+	<li>したがって<strong style="color: #44aa44">通信速度</strong>が上がり、<strong style="color: #ff4444">描画も速く</strong>なる</li>
+	<li><strong style="color: #4444ff">インタラクティブ！</strong></li>
+</ul>
+</div>
+
+<div>
+<h2>Ajaxの問題点</h2>
+<ul>
+	<li><strong style="color: #44aa44">リンクできない</strong></li>
+	<li>ブラウザの<strong style="color: #4444ff">履歴が使えない</strong></li>
+	<li>Crawlerがコンテンツに<strong style="color: #44aa44">アクセスできない</strong></li>
+	<li>Refererに<strong style="color: #ff4444">情報が残らない</strong></li>
+	<li>JavaScriptが動作しないブラウザでは<strong style="color: #ff4444">表示できない</strong></li>
+</ul>
+</div>
+
+<div>
+	<p style="text-align: center; font-size: 250%"><strong style="color: #ff4444">fragment URL</strong><br/>登場</p>
+</div>
+
+<div>
+<h2>fragment URL</h2>
+<ul>
+	<li>http://example.com/index.html<strong style="color: #ff4444">#anchor</strong> ←コレ</li>
+	<li><strong style="color: #44aa44">location.hash</strong> を変更して<strong style="color: #4444ff">リンク</strong>と<strong style="color: #4444ff">履歴</strong>を使用可能に</li>
+</ul>
+</div>
+
+<div>
+<h2>でも結局</h2>
+<p><strong style="color: #4444ff">この問題は解決してない</strong></p>
+<ul>
+	<li>Crawlerがコンテンツに<strong style="color: #44aa44">アクセスできない</strong></li>
+	<li>Refererに<strong style="color: #ff4444">情報が残らない</strong></li>
+	<li>JavaScriptが動作しないブラウザでは<strong style="color: #ff4444">表示できない</strong></li>
+</ul>
+</div>
+
+<div>
+	<p style="text-align: center; font-size: 350%"><strong style="color: #ff4444">#! specs</strong><br/>公開</p>
+</div>
+
+<div>
+<h2>#! specs</h2>
+<ul style="font-size: 80%;">
+	<li>Googleが <a href="https://developers.google.com/webmasters/ajax-crawling/">Making AJAX Applications Crawlable</a> を公開</li>
+	<li>GoogleBot は <strong style="color: #ff4444">#!</strong> を <strong style="color: #44aa44">_escaped_fragment_</strong> に読み替える</li>
+	<li><strong style="color: #44aa44">_escaped_fragment_</strong> 付きのアクセスに<br/>完全なHTMLを返せば<strong style="color: #4444ff">検索インデックスに登録</strong>する</li>
+</ul>
+</div>
+
+<div>
+<h2>#! specs</h2>
+<ul>
+	<li><strong style="color: #ff4444">#! specs</strong> に従えば<strong style="color: #44aa44">検索エンジン</strong>に対応できる</li>
+	<li><strong style="color: #4444ff">Twitter</strong> などが現在も採用している。</li>
+	<li>https://twitter.com/<strong style="color: #ff4444">#!</strong>/gakuzzzz</li>
+</ul>
+</div>
+
+<div>
+<h2>それでもまだ</h2>
+<p><strong style="color: #4444ff">この問題は解決してない</strong></p>
+<ul>
+	<li><strong style="color: #ff4444">GoogleBot以外の</strong>Crawlerが<strong style="color: #44aa44">アクセスできない</strong></li>
+	<li>Refererに<strong style="color: #44aa44">情報が残らない</strong></li>
+	<li>JavaScriptが動作しないブラウザでは<strong style="color: #ff4444">表示できない</strong></li>
+</ul>
+</div>
+
+<div>
+	<p style="text-align: center; font-size: 350%">HTML5<br/><strong style="color: #ff4444">History API</strong></p>
+</div>
+
+<div>
+<h2>HTML5 History API</h2>
+<p><strong style="color: #ff4444">履歴操作</strong>を行うAPI</p>
+<dl>
+	<dt style="color: #4444ff">pushState</dt>
+	<dd>履歴に追加する機能</dd>
+	<dt style="color: #44aa44">popState</dt>
+	<dd>戻る/進むの実行時に処理を行う機能</dd>
+</dl>
+</div>
+
+<div>
+	<p style="text-align: center; font-size: 350%"><strong style="color: #ff4444">pjax</strong>登場</p>
+</div>
+
+<div>
+<h2>pjax</h2>
+<ul>
+	<li><strong style="color: #4444ff">pushState</strong> + <strong style="color: #44aa44">Ajax</strong> = <strong style="color: #ff4444">pjax</strong></li>
+	<li>Ajax時に<strong style="color: #44aa44">History API</strong>を呼ぶ <strong style="color: #4444ff">jQuery plugin</strong></li>
+	<li>GitHubで使われている</li>
+</ul>
+</div>
+
+<div>
+<h2>用語の注意</h2>
+<dl>
+	<dt style="color: #4444ff; width: 4em;margin-left: 1em;">Ajax</dt>
+	<dd>アーキテクチャパターン名</dd>
+	<dt style="color: #ff4444; width: 4em;margin-left: 1em;">pjax</dt>
+	<dd>ライブラリ名</dd>
+</dl>
+</div>
+
+<div>
+<h2>pjaxの仕組み</h2>
+<h3>クライアント</h3>
+<ul>
+	<li>Ajax時ヘッダに <strong style="color: #ff4444">X-PJAX</strong> を付与し現在のURLを書き換え、履歴に追加する。</li>
+	<li>返ってきた<strong style="color: #44aa44">HTML断片</strong>でページの一部を置き換える。</li>
+</ul>
+<h3>サーバ</h3>
+<ul>
+	<li>ヘッダに <strong style="color: #ff4444">X-PJAX</strong> があれば<strong style="color: #44aa44">HTML断片</strong>を返し、無ければページ全体の<strong style="color: #4444ff">完全なHTML</strong>を返す。</li>
+</ul>
+</div>
+
+<div>
+<h2>pjaxのメリット</h2>
+<ul>
+	<li><strong style="color: #ff4444">全て</strong>のCrawlerがコンテンツに<strong style="color: #ff4444">アクセス可能</strong></li>
+	<li>Refererに<strong style="color: #44aa44">情報が残る</strong></li>
+	<li>JavaScriptが動作しないブラウザでも<strong style="color: #4444ff">表示できる</strong></li>
+</ul>
+</div>
+
+<div>
+	<p style="text-align: center; font-size: 350%">DEMO</p>
+</div>
+
+<div>
+<h2>まとめ</h2>
+<ul>
+	<li><strong style="color: #ff4444">pjax</strong> は Ajaxの様々な問題を解決する</li>
+	<li><strong style="color: #44aa44">Play2.0</strong>は柔軟なので複雑な <strong style="color: #ff4444">pjax</strong> も楽に書ける</li>
+	<li><strong style="color: #4444ff">Scala凄い</strong></li>
+</ul>
+</div>
+
+<div>
+<h2>資料</h2>
+<ul>
+	<li><a href="http://pjax.heroku.com/">pjax</a></li>
+	<li><a href="https://github.com/defunkt/jquery-pjax">pjax GitHub</a></li>
+	<li><a href="https://developers.google.com/webmasters/ajax-crawling/">Making AJAX Applications Crawlable</a></li>
+	<li><a href="http://www.w3.org/TR/html5/history.html#history">Session history and navigation in HTML5</a></li>
+	<li><a href="https://github.com/gakuzzzz/play2.0-pjax-demo/">DEMO sources</a></li>
+	<li><a href="">この資料</a></li>
+</ul>
+</div>
+
+</body>
+
+</html>
