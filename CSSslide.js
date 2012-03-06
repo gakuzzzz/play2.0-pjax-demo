@@ -10,7 +10,7 @@
 var CSSslide={
  slide:[], //スライドが入る配列
  nowPage:0, //現在のページ
- enableUsagePage:0, //使い方のページを表示する
+ enableUsagePage:1, //使い方のページを表示する
  enableRestartPage:0, //最初に戻るページを表示する
  enableFontResize:1, //起動時にフォントサイズを自動調整する
  fontSizeRatio:100, //フォントの拡大率(%)
