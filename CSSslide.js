@@ -11,7 +11,7 @@ var CSSslide={
  slide:[], //スライドが入る配列
  nowPage:0, //現在のページ
  enableUsagePage:1, //使い方のページを表示する
- enableRestartPage:0, //最初に戻るページを表示する
+ enableRestartPage:1, //最初に戻るページを表示する
  enableFontResize:1, //起動時にフォントサイズを自動調整する
  fontSizeRatio:100, //フォントの拡大率(%)
  fontSizeRatioDefault:100, //元のフォントの拡大率(%)
@@ -23,7 +23,7 @@ var CSSslide={
  init:function(){
   //イベントリスナの登録
   document.onkeydown=CSSslide.keyListener;
-//  document.onmousedown=CSSslide.mouseListener;
+  document.onmousedown=CSSslide.mouseListener;
   //使い方のページ
   if(CSSslide.enableUsagePage==1){
    CSSslide.slide.push({"innerHTML": CSSslide.usagePage,"s":null,"c":null});
